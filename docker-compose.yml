@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  model_app:
+    build: ./model_app
+    ports:
+      - "5000:5000"
+    networks:
+      - my_network
+  data_container:
+    build: ./data_container
+    ports:
+      - "7000:7000"
+    networks:
+      - my_network
+  
+  streamlit_app:
+    build: ./streamlit_app
+    ports:
+      - "80:80"
+    networks:
+      - my_network
+
+
+  # data_app:
+  #   build: ./data_app
+  #   ports:
+  #     - "80:80"
+  #   networks:
+  #     - my_network
+  #   volumes:
+  #     - data_app:/var/lib/db
+networks:
+  my_network:
+    driver: bridge
+
+volumes:
+  data_app:
