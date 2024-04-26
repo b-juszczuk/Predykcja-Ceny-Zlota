@@ -31,7 +31,7 @@ def load_data():
     
     return data
 
-# Przygotowanie danych wejściowych i wyjściowych dla modelu LSTM
+# Przygotowanie danych wejściowych i wyjściowych dla modelu
 def prepare_data(data, time_steps):
     X, y = [], []
     for i in range(len(data) - time_steps):
@@ -39,14 +39,13 @@ def prepare_data(data, time_steps):
         y.append(data[i + time_steps, 1])
     return np.array(X), np.array(y)
 
-# Określenie liczby kroków czasowych (w tym przypadku, możemy przyjąć 3)
+# Określenie liczby kroków czasowych (w tym przypadku 3)
 time_steps = 3
-# Inicjalizacja modelu LSTM
+
 model = Sequential()
 model.add(Flatten())
 model.add(Dense(32, activation='relu'))
-# model.add(LSTM(units=50)) # Dodanie kolejnej warstwy LSTM z 50 jednostkami
-model.add(Dense(units=1)) # Dodanie warstwy gęstej z jedną jednostką wyjściową
+model.add(Dense(units=1)) 
 
 # Kompilacja modelu
 model.compile(optimizer='adam', loss='mean_squared_error')
@@ -58,7 +57,6 @@ status = 'Untrained'
 def train_model():
     global model
     data = load_data()  
-    # data_scaled = MinMaxScaler(feature_range=(0, 1)).fit_transform(data)
     X, y = prepare_data(data, time_steps)
 
     train_size = int(0.75*len(X))

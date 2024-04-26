@@ -21,15 +21,6 @@ services:
     networks:
       - my_network
 
-
-  # data_app:
-  #   build: ./data_app
-  #   ports:
-  #     - "80:80"
-  #   networks:
-  #     - my_network
-  #   volumes:
-  #     - data_app:/var/lib/db
 networks:
   my_network:
     driver: bridge

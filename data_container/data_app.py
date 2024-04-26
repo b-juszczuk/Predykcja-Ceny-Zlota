@@ -7,18 +7,7 @@ from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()  # Inicjalizuje aplikację FastAPI
 
-# app.mount("/static", StaticFiles(directory="static"), name="static")
-
 data_file = 'gold_price_data.csv'  # Określa nazwę pliku, w którym będą przechowywane dane w formacie CSV
-
-# @app.get('/', response_class=HTMLResponse)  # Definiuje trasę dla głównej strony
-# async def index(request: Request):  # Funkcja obsługująca żądania GET na głównej stronie
-#     if not os.path.exists(data_file):  # Sprawdza, czy plik danych istnieje
-#         with open(data_file, 'w', newline='') as f:  # Jeśli nie istnieje, tworzy nowy plik CSV i zapisuje nagłówki kolumn
-#             writer = csv.writer(f)
-#             writer.writerow(['Date', 'Value'])
-#     table = pd.read_csv(data_file)  # Wczytuje dane z pliku CSV do obiektu DataFrame
-#     return templates.TemplateResponse("index.html", {"request": request, "table": table})  # Renderuje szablon HTML, wyświetlając tabelę danych
 
 @app.post('/add-row')  # Definiuje trasę dla dodawania nowych wierszy do pliku CSV
 async def add_row(request: Request, date: str = Form(...), price: float = Form(...)):  # Funkcja obsługująca żądania POST dodawania nowych wierszy
