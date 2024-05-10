@@ -1,5 +1,5 @@
 # Aplikacja do przewidywania ceny złota
-To repozytorium zawiera aplikację z funkcją uczenia, która przewiduję cenę złota w okresie od 01.01.1970 do 14.03.2020. 
+To repozytorium zawiera aplikację z funkcją uczenia, która przewiduję cenę złota w okresie od 01.01.1979 do 14.03.2020. 
 Do zarządzania kontenerami wykorzystano Docker Compose.
 
 ![apka](https://github.com/b-juszczuk/Predykcja-Ceny-Zlota/assets/115696513/7b6fb791-78ed-4381-bd01-3f4d62aa4ddc)
