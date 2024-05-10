@@ -3,9 +3,10 @@ import requests
 from datetime import date
 import time
 
+
 st.title('Przewidywanie cen złota')
 st.image('./static/gold.jpg', width=200)
-selected_data = st.date_input('Wprowadź datę', value=date(day=1, month=1, year=1971), min_value=date(day=1, month=1, year=1970), max_value= date(day=14, month = 3, year=2020))
+selected_data = st.date_input('Wprowadź datę', value=date(day=1, month=1, year=2015), min_value=date(day=1, month=1, year=1979), max_value= date(day=14, month = 3, year=2020))
 
 predict_button = st.button('Wygeneruj predykcję')
 
@@ -16,5 +17,5 @@ if predict_button:
         st.error('Nie udało się dostać predykcji')
     else:
         prediction = response.json()['prediction']
-        st.success(f'Predykcja na cenę złota w dniu {str(selected_data)} wynosi: {prediction[0][0]}')
+        st.success(f'Predykcja na cenę złota w {str(selected_data)} wynosi: {prediction[0][0]}')
         st.balloons()

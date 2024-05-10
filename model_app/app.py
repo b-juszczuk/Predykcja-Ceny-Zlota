@@ -31,7 +31,7 @@ def load_data():
     
     return data
 
-# Przygotowanie danych wejściowych i wyjściowych dla modelu
+# Przygotowanie danych wejściowych i wyjściowych dla modelu 
 def prepare_data(data, time_steps):
     X, y = [], []
     for i in range(len(data) - time_steps):
@@ -39,19 +39,16 @@ def prepare_data(data, time_steps):
         y.append(data[i + time_steps, 1])
     return np.array(X), np.array(y)
 
-# Określenie liczby kroków czasowych (w tym przypadku 3)
+# Określenie liczby kroków czasowych (w tym przypadku przyjmujemy 3)
 time_steps = 3
-
+# Inicjalizacja modelu 
 model = Sequential()
 model.add(Flatten())
 model.add(Dense(32, activation='relu'))
-model.add(Dense(units=1)) 
+model.add(Dense(units=1)) # Dodanie warstwy gęstej z jedną jednostką wyjściową
 
 # Kompilacja modelu
 model.compile(optimizer='adam', loss='mean_squared_error')
-
-status = 'Untrained'
-
 
 # Trenowanie modelu
 def train_model():
@@ -81,7 +78,6 @@ def train_model():
     y_test = mms2.transform(y_test.reshape((-1, 1)))
 
     model.fit(X_train.reshape((X_train.shape[0], X_train.shape[1], 1)), y_train, epochs=30, batch_size=32, validation_split=0.2)
-    status = 'Trained'
 
 
 
@@ -113,10 +109,6 @@ async def predict(input_data: InputData):
     y_pred = mms2.inverse_transform(y_pred.reshape((1, -1)))
 
     return {'prediction': y_pred.tolist()}
-
-@app.get('/get_model_status')
-async def status():
-    return {'status': status}
 
 
 if __name__ == "__main__":
