@@ -9,8 +9,7 @@ treningu modelu. Nastęonie dla wybranej daty zwraca przewidywaną cenę złota
 - **/post/predict** - zwraca przewidywaną cenę złota dla wybranej daty
 
 ![image](https://github.com/b-juszczuk/Predykcja-Ceny-Zlota/assets/115696513/4c72423e-7b64-4c1f-aaf4-37b9e2c7290c)
-![image](https://github.com/b-juszczuk/Predykcja-Ceny-Zlota/assets/115696513/0b6579ac-248c-494b-9621-612eaa1f9b0e)
-
+![image](https://github.com/b-juszczuk/Predykcja-Ceny-Zlota/assets/115696513/03b57c98-7684-4494-b064-cf777aa7ee69)
 
 ## Struktura folderu:
 - `app.py`- plik zawierający głowny skrypt aplikacji,
