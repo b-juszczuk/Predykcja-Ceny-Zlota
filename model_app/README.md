@@ -1,13 +1,16 @@
 ## Trenowanie modelu
 
-Kontener ten odpowiada za pobranie plików z kontenera data_container, 
+Kontener ten odpowiada za pobranie plików z kontenera **data_container**, 
 przekonwenterowanie tych danych, a następnie na ich podstawie dokonuje się
-treningu modelu.
+treningu modelu. Nastęonie dla wybranej daty zwraca przewidywaną cenę złota 
 
 ## Punkty końcowe
-- **/get/data** - GET API do pobierania danych z pliku gold_price_data.csv.
+- **/post/train** - trenowanie modelu
+- **/post/predict** - zwraca przewidywaną cenę złota dla wybranej daty
 
-Dokonczyć !!!!!!!!!!!!!!!!!!!
+![image](https://github.com/b-juszczuk/Predykcja-Ceny-Zlota/assets/115696513/4c72423e-7b64-4c1f-aaf4-37b9e2c7290c)
+![image](https://github.com/b-juszczuk/Predykcja-Ceny-Zlota/assets/115696513/0b6579ac-248c-494b-9621-612eaa1f9b0e)
+
 
 ## Struktura folderu:
 - `app.py`- plik zawierający głowny skrypt aplikacji,
