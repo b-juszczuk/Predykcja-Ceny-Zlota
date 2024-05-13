@@ -7,7 +7,7 @@ Do zarządzania kontenerami wykorzystano aplikację Docker.
 **Struktura projektu:** 
 
 ```markdown
-aplikacja
+Predykcja_Ceny_Zlota
 │   ├── data_container
 │   │   ├── Dockerfile
 │   │   ├── data_app.py
