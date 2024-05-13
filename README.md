@@ -29,11 +29,11 @@ Predykcja_Ceny_Zlota
 │   └── README.md
 ```
 
-- `data_container`- kontener odpowiadający za przesłanie danych do uczenia 
-- `model_app`- kontener odpowiadający za uczenie modelu
-- `streamlit_app` - kontener odpowiadający za wygląd interfejsu użytkownika
-- `docker-compose.yml` - skrypt odpowiadający za kontaktowanie pomiędzy kontenerami
-- `README.md` - plik zawierający instrukcję
+- `data_container`- kontener odpowiadający za przesłanie danych do uczenia, 
+- `model_app`- kontener odpowiadający za uczenie modelu,
+- `streamlit_app` - kontener odpowiadający za wygląd interfejsu użytkownika,
+- `docker-compose.yml` - skrypt odpowiadający za kontaktowanie pomiędzy kontenerami,
+- `README.md` - plik zawierający instrukcję.
 
 # Jak uruchomić
 Aby uruchomic aplikacje na początku sklonuj to repozytorium.
