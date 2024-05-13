@@ -4,6 +4,8 @@ Kontener ten odpowiada za pobranie plików z kontenera **data_container**,
 przekonwenterowanie tych danych, a następnie na ich podstawie dokonuje się
 treningu modelu. Nastęonie dla wybranej daty zwraca przewidywaną cenę złota.
 
+Kontener ten jest mapowany na porcie `http://localhost:5000/docs`
+
 ## Punkty końcowe
 - **/post/train** - trenowanie modelu
 - **/post/predict** - zwraca przewidywaną cenę złota dla wybranej daty
