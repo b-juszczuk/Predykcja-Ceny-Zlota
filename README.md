@@ -49,5 +49,5 @@ Otwórz przeglądarkę internetową i przejdź do http://localhost:80, aby przet
 
 > :warning: **Ostrzeżenie:**
 >
-> Jeśli pojawi się błąd po naciśnięciu przycisku "Wygeneruj predykcję" odczekaj chwilę iponownie naciśnij przycisk, prawdopodobnie trwa uczenie modelu i dlatego pojawia sie błąd.
+> Jeśli pojawi się błąd po naciśnięciu przycisku "Wygeneruj predykcję" odczekaj chwilę i ponownie naciśnij przycisk, prawdopodobnie trwa uczenie modelu i dlatego pojawia sie błąd.
 
